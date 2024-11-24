@@ -35,7 +35,7 @@ function Container() {
             <div id='pageInfo'>
             <p id='back_button' onClick={decreasePageNumber}>Back</p>
             <p id='page_number'>{page_number}/{Object.keys(pages).length}</p>
-            <p id='next_button' onClick={increasePageNumber}>Next</p>
+            <p id='next_button' onClick={increasePageNumber}>{Object.keys(pages).length==page_number?"Finish":"Next"}</p>
             </div>
         </div>
   )
