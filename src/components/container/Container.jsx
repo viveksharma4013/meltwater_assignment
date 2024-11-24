@@ -6,12 +6,12 @@ import Brands from '../brands/Brands'
 
 function Container() {
     const [page_number, setPage_number] = useState(1)
-    const [userName, setuserName] = useState("Naomi")
-    const [expertise, setExpertise] = useState([])
+    const [userName, setuserName] = useState("")
+    const [expertise, setExpertise] = useState(new Set())
 
     const pages={
         1:<Introduction setuserName = {setuserName}/>,
-        2:<Expertise name={userName}/>,
+        2:<Expertise name={userName} setMasterExpertise={setExpertise}/>,
         3:<Brands number={userName}/>
     }
 
@@ -30,7 +30,6 @@ function Container() {
         }
     }
   return (
-    // <UserContext.Provider value="vivek">
         <div className='container'>
             {getCurrentPage()}
             <div id='pageInfo'>
@@ -39,7 +38,6 @@ function Container() {
             <p id='next_button' onClick={increasePageNumber}>Next</p>
             </div>
         </div>
-    // </UserContext.Provider>
   )
 }
 

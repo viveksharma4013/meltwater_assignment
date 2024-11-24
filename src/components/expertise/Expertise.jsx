@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 
-function Expertise({name}) {
+function Expertise({name, setMasterExpertise}) {
     const [expertise, setexpertise] = useState(new Set)
     function addExpertise(e){
         let isChecked = e.target.checked
@@ -13,6 +13,8 @@ function Expertise({name}) {
     }
   return (
    <div>
+     <h4>Hi {name}</h4>
+     <h4>What are your expertise?</h4>
      <input type='checkbox' onChange={e => addExpertise(e)} name="cooking"/>
      <label for="cooking"> Cooking</label>
      <input type='checkbox'onChange={e => addExpertise(e)} name="driving"/>
