@@ -1,0 +1,22 @@
+.container #pageInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageInfo{
+    padding-top: 2rem;
+}
+
+#page_number{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#next_button:hover{
+    color: rgb(85, 85, 255);
+    cursor: pointer;
+}
+#back_button:hover{
+    color: rgb(85, 85, 255);
+    cursor: pointer;
+}
